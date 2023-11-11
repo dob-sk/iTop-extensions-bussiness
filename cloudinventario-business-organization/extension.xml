@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension format="1.0">
+  <extension_code>cloudinventario-business-organization</extension_code>
+  <version>1.0.0</version>
+  <label><![CDATA[Cloudinventario Business Organization]]></label>
+  <description><![CDATA[This extension introduces a new organizational object that extends the default class with a comprehensive set of attributes designed to address business needs]]></description>
+  <mandatory>false</mandatory>
+  <more_info_url></more_info_url>
+</extension>

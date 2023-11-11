@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
+  <constants>
+  </constants>
+  <classes>
+    <class id="BusinessOrganization" _delta="define">
+      <parent>Organization</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>business_organization</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <attributes>
+            <attribute id="business_name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon/>
+      </properties>
+      <fields>
+        <field id="business_name" xsi:type="AttributeString">
+          <sql>business_name</sql>
+          <default_value/>
+          <is_null_allowed>false</is_null_allowed>
+        </field>
+        <field id="country" xsi:type="AttributeString">
+          <sql>country</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="company_id" xsi:type="AttributeString">
+          <sql>company_id</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="billing_address" xsi:type="AttributeExternalKey">
+          <sql>billing_address</sql>
+          <target_class>Location</target_class>
+          <is_null_allowed>true</is_null_allowed>
+          <on_target_delete>DEL_MANUAL</on_target_delete>
+        </field>
+        <field id="shipping_address" xsi:type="AttributeExternalKey">
+          <sql>shipping_address</sql>
+          <target_class>Location</target_class>
+          <is_null_allowed>true</is_null_allowed>
+          <on_target_delete>DEL_MANUAL</on_target_delete>
+        </field>
+        <field id="email" xsi:type="AttributeEmailAddress">
+          <sql>email</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="phone" xsi:type="AttributePhoneNumber">
+          <sql>phone</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+      <methods/>
+      <presentation>
+        <details>
+          <items>
+            <item id="col:col1">
+              <items>
+                <item id="fieldset:BusinessOrganization:baseinfo">
+                  <rank>10</rank>
+                  <items>
+                    <item id="name">
+                      <rank>10</rank>
+                    </item>
+                    <item id="code">
+                      <rank>20</rank>
+                    </item>
+                    <item id="status">
+                      <rank>30</rank>
+                    </item>
+                    <item id="deliverymodel_id">
+                      <rank>40</rank>
+                    </item>
+                    <item id="description_short">
+                      <rank>50</rank>
+                    </item>
+                    <item id="description">
+                      <rank>60</rank>
+                    </item>
+                  </items>
+                </item>
+              </items>
+            </item>
+            <item id="col:col2">
+              <items>
+                <item id="fieldset:BusinessOrganization:addinfo">
+                  <rank>50</rank>
+                  <items>
+                    <item id="business_name">
+                      <rank>10</rank>
+                    </item>
+                    <item id="country">
+                      <rank>20</rank>
+                    </item>
+                    <item id="company_id">
+                      <rank>30</rank>
+                    </item>
+                    <item id="billing_address">
+                      <rank>40</rank>
+                    </item>
+                    <item id="shipping_address">
+                      <rank>50</rank>
+                    </item>
+                    <item id="email">
+                      <rank>60</rank>
+                    </item>
+                    <item id="phone">
+                      <rank>70</rank>
+                    </item>
+                  </items>
+                </item>
+              </items>
+            </item>
+          </items>
+        </details>
+        <default_search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="business_name">
+              <rank>20</rank>
+            </item>
+          </items>
+        </default_search>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="business_name">
+              <rank>20</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="business_name">
+              <rank>20</rank>
+            </item>
+            <item id="company_id">
+              <rank>30</rank>
+            </item>
+            <item id="billing_address">
+              <rank>40</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+      <methods>
+      </methods>
+    </class>
+  </classes>
+  <menus>
+  </menus>
+  <user_rights>
+    <groups>
+    </groups>
+    <profiles>
+    </profiles>
+  </user_rights>
+</itop_design>
